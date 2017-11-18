@@ -5,7 +5,7 @@
 
 int main(int argc, char* argv[])
 {
-  char* name = argv[1];
+  char *name = argv[1];
   CURL *curl = curl_easy_init(); //объявление объект типа CURL и его инициализация
   if(curl) //обязательная проверка
   {
