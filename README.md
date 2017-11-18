@@ -5,8 +5,8 @@
 Передача аргумента происходит через командную строку.
 
 ## Terminal:
+```ShellSession
 $ ./main https://yandex.ru
-
 Redirect to: https://yandex.ru/
-
 Код ответа: 200
+```
