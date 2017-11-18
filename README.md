@@ -6,5 +6,7 @@
 
 ## Terminal:
 $ ./main https://yandex.ru
+
 Redirect to: https://yandex.ru/
+
 Код ответа: 200
