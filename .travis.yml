@@ -4,4 +4,4 @@ script:
 - cmake -H. -B_build
 - cmake --build _build
 - cd _build
-- ./main
+- ./main https://yandex.ru
