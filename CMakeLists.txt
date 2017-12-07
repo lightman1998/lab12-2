@@ -14,4 +14,4 @@ hunter_add_package(CURL)
 find_package(CURL CONFIG REQUIRED)
 
 add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp) # Добавляем цель main (исполняемый файл) main по исходному файлу main.cpp 
-target_link_libraries(main CURL::libcurl OpenSSL::SSL) # Линковка цели main с целью libcurl из пространства имён CURL и цели SSL,Crypto из пространства имён OpenSSL
+target_link_libraries(main CURL::libcurl) # Линковка цели main с целью libcurl из пространства имён CURL и цели SSL,Crypto из пространства имён OpenSSL
