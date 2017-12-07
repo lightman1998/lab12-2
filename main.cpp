@@ -10,8 +10,8 @@ int main(int argc, char* argv[])
   if(curl) //обязательная проверка
   {
     CURLcode res;
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0); // Не проверять SSL сертификат
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0); 
+//    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0); // Не проверять SSL сертификат
+//    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0); 
     curl_easy_setopt(curl, CURLOPT_NOBODY, true); // Изменяет метод запроса на HEAD и игнорирует содержимое 
     curl_easy_setopt(curl, CURLOPT_URL, name);   // Получить страницу по адресу 
     res = curl_easy_perform(curl);     //вызываем функцию, выполняющюю все операции, заданные в опциях выше, результат - объект типа CURLcode
