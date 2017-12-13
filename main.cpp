@@ -6,14 +6,14 @@
 int main(int argc, char* argv[])
 {
   char *name = argv[1];
-  CURL *curl = curl_easy_init(); //объявление объект типа CURL и его инициализация
-  if(curl) //обязательная проверка
+  CURL *curl = curl_easy_init(); 
+  if(curl) 
   {
     CURLcode res;
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0); // Не проверять SSL сертификат
+    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0); 
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0); 
-    curl_easy_setopt(curl, CURLOPT_NOBODY, true); // Изменяет метод запроса на HEAD и игнорирует содержимое 
-    curl_easy_setopt(curl, CURLOPT_URL, name);   // Получить страницу по адресу 
+    curl_easy_setopt(curl, CURLOPT_NOBODY, true);
+    curl_easy_setopt(curl, CURLOPT_URL, name);  
     res = curl_easy_perform(curl);     //вызываем функцию, выполняющюю все операции, заданные в опциях выше, результат - объект типа CURLcode
     if(res == CURLE_OK)  //проверяем успешность выполнения операции
     {
